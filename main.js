@@ -258,13 +258,26 @@ var createScene = function()
     panel4.addControl(worldBoundsSliderButton);
     rect2.addControl(panel4);
 
-    
+    var rect3 = new BABYLON.GUI.Rectangle();
+    rect3.adaptHeightToChildren = true;
+    rect3.color = "Yellow";
+    rect3.thickness = 4;
+    rect3.background = "green";
+
+    var controlsText = new BABYLON.GUI.TextBlock();
+    controlsText.text = "Controls\nUse the arrow keys to move and\nleft click to rotate the camera";
+    controlsText.height = "100px";
+    controlsText.color = "white";
+    controlsText.textWrapping = true;
+    rect3.addControl(controlsText);
+
     panel.addControl(showButton);
     panel.addControl(panel2);
     panel2.addControl(button);
     panel2.addControl(button2);
     panel2.addControl(rect1);
     panel2.addControl(rect2);
+    panel2.addControl(rect3);
 
     return scene;
 }
